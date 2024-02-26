@@ -52,11 +52,11 @@ for (const seat of allSeat) {
 }
 
 
-
 function updateTotalPrice(value) {
     // console.log(value);
     const updatePrice = getConvertedValue('total-price');
     const sum = updatePrice + value
+
     document.getElementById('total-price').innerText = sum
     if (sum > 1) {
         document.getElementById('nextBtn').removeAttribute('disabled', true)
@@ -66,8 +66,6 @@ function updateTotalPrice(value) {
 function updateGrandTotal(status) {
     // console.log(status);
     const updatePrice = getConvertedValue('total-price');
-
-
     if (status == undefined) {
         document.getElementById('grand-total').innerText = updatePrice
     } else {
@@ -76,16 +74,17 @@ function updateGrandTotal(status) {
         document.getElementById('coupon-code').value = "";
         if (couponCode == "NEW15") {
             const discount = updatePrice * .15
+            document.getElementById('discount-price').innerText = - discount
             document.getElementById('grand-total').innerText = updatePrice - discount
             document.getElementById('coupon-field').classList.add('hidden')
         } else if (couponCode == "couple20") {
             const discount = updatePrice * .20
+            document.getElementById('discount-price').innerText = - discount
             document.getElementById('grand-total').innerText = updatePrice - discount
             document.getElementById('coupon-field').classList.add('hidden')
         } else {
             alert("Enter Valid Coupon Code")
         }
-
 
     }
 
