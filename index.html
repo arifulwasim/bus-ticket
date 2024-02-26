@@ -50,12 +50,179 @@
         </div>
     </header>
 
-
-
-
-
-
     <main>
+        <!-- greenline section -->
+
+        <section class="greenline custom-container my-12">
+            <div class="greenline-heading">
+                <h1>P.H Paribahan</h1>
+                <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                    features
+                    allow for a streamlined .</p>
+            </div>
+
+            <div class="bg-white w-[90%] mx-auto rounded-3xl mt-10">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div>
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="flex gap-4  justify-center pt-10 pl-8">
+                                <div class="h-10">
+                                    <img src="./images/bus-logo.png" alt="">
+                                </div>
+                                <div>
+                                    <h2 class="text-[24px] font-bold">Hanif Paribahan</h2>
+                                    <p>Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <div class="p-14">
+                                <a class="btn bg-green-200 text-[24px] text-[#1DD100] font-semibold ">
+                                    <div class="flex gap-2">
+                                        <img src="./img/seat-green-filled.png " height="14px" width="24px" alt="">
+                                        <span id="seatLeft">8</span>Seats left
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Journey area details -->
+                        <div class="bg-[#F7F8F8] h-[300px] p-14 ml-7 mb-8 rounded-3xl">
+                            <div class="flex justify-between font-bold">
+                                <p>Route</p>
+                                <p>Dhaka-Sylhet</p>
+                            </div>
+                            <hr class="my-5">
+                            <div class="flex justify-between font-bold">
+                                <p>Departure</p>
+                                <p>9.00 pm</p>
+                            </div>
+                            <hr class="my-5">
+                            <div class="flex flex-col lg:flex-row gap-2 justify-between font-bold">
+                                <p class="btn">Boarding Point-Laxmipur</p>
+                                <p class="btn">Dropping Point-Bogura</p>
+                                <p class="btn">Est.Time-11 Hour</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="pr-10 w-0 lg:w-[100px]" src="./img/info-devider.png" alt="">
+                    <div class="flex flex-col justify-center items-center mr-0 lg:mr-24">
+                        <div>
+                            <img src="./img/fare.png" alt="">
+                        </div>
+                        <h2 class="text-2xl font-bold block">550Taka</h2>
+                        <p class="text-[24px]">Per Seat</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <section class="bg-white w-[91%] mx-auto rounded-3xl mt-16">
+                <!-- <div class="flex justify-between font-bold pt-8 px-12"> -->
+                <div class="flex flex-col lg:flex-row px-10 gap-5">
+                    <div class="w-full">
+                        <p class="font-semibold pt-4 text-center">Select Your Seat</p>
+                        <!-- available and selected seat -->
+                        <div>
+                            <div class="flex justify-between font-bold">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/seat-gray.png" alt="">
+                                    <p>Available</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/seat-green.png" alt="">
+                                    <p>Selected</p>
+                                </div>
+                            </div>
+                            <p class="flex justify-end mt-7">
+                                <img class="bg-slate-300 p-2 rounded-lg" src="./img/bus-icon.png" alt="">
+                            </p>
+                        </div>
+                        <!--seats  -->
+                        <div>
+                            <div class="flex items-center justify-center gap-x-8 gap-y-2 mt-8">
+                                <div>
+                                    <p class="btn block text-center mt-2 flex justify-center">A</p>
+                                    <p class="btn block text-center mt-2 flex justify-center">B</p>
+                                </div>
+                                <div class="grid grid-cols-2 flex-1 gap-[4px]">
+                                    <button class="py-3 btn allSeat">A1</button>
+                                    <button class="py-3 btn allSeat">A2</button>
+                                    <button class="py-3 btn allSeat">B1</button>
+                                    <button class="py-3 btn allSeat">B2</button>
+                                </div>
+                                <div class="grid grid-cols-2 gap-[4px] flex-1">
+                                    <button class="py-3 btn allSeat">A3</button>
+                                    <button class="py-3 btn allSeat">A4</button>
+                                    <button class="py-3 btn allSeat">B3</button>
+                                    <button class="py-3 btn allSeat">B4</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- selected seat details -->
+                    <div class="w-full">
+                        <p class="font-semibold pt-4 text-center">Your Selected Seat</p>
+                        <hr class="my-5">
+                        <div class=" bg-[#F7F8F8] rounded-2xl">
+                            <div class="flex justify-between p-4 font-bold">
+                                <p>Seat <span id="totalSeat" class="bg-[#1DD100] text-white p-1 rounded">0</span>
+                                </p>
+                                <p>Class</p>
+                                <p>Price</p>
+                            </div>
+                            <hr class="my-4 w-[90%] mx-auto">
+                            <div id="passengers-info">
+                            </div>
+                            <!-- total price -->
+                            <div class="flex justify-between p-4 font-bold">
+                                <p>Total Price:</p>
+                                <p>BDT <span id="total-price">0</span></p>
+                            </div>
+                            <!-- discount price by user coupon -->
+                            <div>
+
+                            </div>
+                            <!-- coupon apply  -->
+                            <div class="ml-4" id="coupon-field">
+                                <input id="coupon-code" class="w-[80%] py-3 px-2 rounded" type="text"
+                                    placeholder="Coupon discount">
+                                <button onclick="updateGrandTotal('apply')" id="applyBtn"
+                                    class="btn bg-[#1DD100] text-white" disabled>Apply</button>
+                            </div>
+
+                            <div class="flex justify-between p-5 font-extrabold">
+                                <p>Grand Total:</p>
+                                <p>BDT <span id="grand-total">0</span></p>
+                            </div>
+
+                        </div>
+                        <div class="mt-5">
+                            <button onclick="my_modal_5.showModal()"
+                                class="w-full btn bg-[#1DD100] text-white font-bold text-2xl mt-2" disabled
+                                id="nextBtn">NEXT</button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <img src="img/modal.png" alt="">
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
 
     </main>
     <footer>
