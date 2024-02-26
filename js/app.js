@@ -98,3 +98,5 @@ document.getElementById('coupon-code').addEventListener('keyup', function (e) {
         document.getElementById('applyBtn').removeAttribute('disabled', true)
     }
 })
+
+
