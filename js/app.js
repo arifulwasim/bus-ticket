@@ -78,9 +78,15 @@ function updateGrandTotal(status) {
             const discount = updatePrice * .15
             document.getElementById('grand-total').innerText = updatePrice - discount
             document.getElementById('coupon-field').classList.add('hidden')
+        } else if (couponCode == "couple20") {
+            const discount = updatePrice * .20
+            document.getElementById('grand-total').innerText = updatePrice - discount
+            document.getElementById('coupon-field').classList.add('hidden')
         } else {
             alert("Enter Valid Coupon Code")
         }
+
+
     }
 
 }
@@ -89,7 +95,7 @@ function updateGrandTotal(status) {
 document.getElementById('coupon-code').addEventListener('keyup', function (e) {
     const tatolPriceValue = document.getElementById('total-price').innerText
     // console.log(tatolPriceValue);
-    if (tatolPriceValue > 1 && e.target.value === "NEW15") {
+    if (tatolPriceValue > 1 && e.target.value === "NEW15" || e.target.value === "couple20") {
         document.getElementById('applyBtn').removeAttribute('disabled', true)
     }
 })
